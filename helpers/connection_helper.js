@@ -1,7 +1,7 @@
 let Sequelize = require("sequelize");
 const getConnection = function() {
-	const sequelize = new Sequelize('MyBlock', 'root', 'root', {
-            dialect: "mysql",
+	const sequelize = new Sequelize('MyBlock', 'SA', 'AbHi2726#', {
+            dialect: "mssql",
             host: '0.0.0.0'
         });
 	return new Promise(function(resolve, reject){

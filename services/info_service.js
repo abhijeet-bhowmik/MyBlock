@@ -23,7 +23,8 @@ module.exports = {
         getBalance.then(function(result) {
         
           let response = {
-            "walletBalance" : result
+            "walletBalance" : result,
+            "walletBalanceInEth" : web3.utils.fromWei(result, "ether")
           }
           return resolve(response);
         }).catch(function(err) {

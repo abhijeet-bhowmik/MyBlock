@@ -39,7 +39,7 @@ function prepTx(txObject) {
   }
   console.log(unsignedTx);
   let tx = new Tx(unsignedTx);
-  tx.sign(new Buffer("80b90f14cc220e0f71ff54da98698045834db64b23df19fc5f5c995530e50606", 'hex'));
+  tx.sign(constants.PRIVATE_KEY);
   return tx.serialize();
 
 }
